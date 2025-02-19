@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="tambah.css">
+</head>
+
+<body class="m-4">
+  <h1>Ubah Data </h1>
+
+  <form class="mb-3">
+    <div class="mb-3">
+      <label class="form-label">Nama</label>
+      <input type="text" class="form-control" id="input-nama">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Prioritas</label>
+      <input type="text" class="form-control" id="input-prioritas">
+    </div>
+      <div class="mb-3">
+      <label class="form-label">Status</label>
+      <input type="text" class="form-control" id="input-status">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Tanggal</label>
+      <input type="text" class="form-control" id="input-tanggal">
+    </div>
+    <button type="submit" class="btn btn-primary" id="tombol-ubah">Simpan</button>
+   <img src="loader.gif" style="width: 2em; //display: none" id="loader">
+  </form>
+
+  <a class="mt-1" href="index.html">Lihat Daftar To-Do-List</a>
+
+  <script type="module">
+    import { ambilToDoList, ubahToDoList } from './main.js';
+
+    let tombolUbah = document.getElementById('tombol-ubah');
+    let elemenNama = document.getElementById('input-nama');
+    let elemenPrioritas = document.getElementById('input-prioritas');
+    let elemenStatus = document.getElementById('input-status');
+    let elemenTanggal = document.getElementById('input-tanggal');
+    let loader = document.getElementById('loader');
+    const queryString = window.location.search
+    const parameterURL = new URLSearchParams(queryString);
+    const docId = parameterURL.get('docId')
+    const toDoList = await ambilToDoList(docId);
+
+    elemenNama.value = toDoList.nama;
+    elemenPrioritas.value = toDoList.prioritas;
+    elemenStatus.value = toDoList.status;
+    elemenTanggal.value = toDoList.tanggal;
+
+
+    tombolUbah.addEventListener('click', async function(el) {
+      el.preventDefault();
+      await ubahToDoList(docId, elemenNama.value, elemenPrioritas.value, elemenStatus.value, elemenTanggal.value );
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+
+</html>

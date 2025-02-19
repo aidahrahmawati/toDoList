@@ -1,0 +1,71 @@
+h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+/* Warna latar belakang keseluruhan */
+body {
+    background-color: #E2E7EB; /* Biru muda */
+    font-family: Arial, sans-serif;
+}
+
+/* Gaya tabel */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #bbdefb; /* Biru lebih muda */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+
+/* Header tabel */
+.table thead {
+    background-color: #F6649C; /* Biru sedang */
+    color: white;
+}
+
+.table thead th {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #1976D2; /* Biru lebih gelap */
+}
+
+/* Baris bergaris */
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #023962; /* Warna lebih cerah */
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #003969;
+}
+
+/* Hover efek */
+.table tbody tr:hover {
+    background-color: #2359D7; /* Biru yang lebih cerah */
+    transition: 0.3s;
+}
+
+/* Sel tabel */
+.table td, .table th {
+    padding: 12px;
+    border-bottom: 1px solid #3C6382;
+}
+
+/* Tombol */
+.btn {
+    background-color: #FF0505;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #67839E;
+}
+  

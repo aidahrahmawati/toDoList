@@ -1,0 +1,81 @@
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    form {
+      background-color: white;
+      padding: 30px;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form-label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-control {
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding: 12px;
+    }
+
+    .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    #loader {
+      display: none;
+      width: 2em;
+      height: 2em;
+      margin-top: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 1.1em;
+      color: #007bff;
+    }
+
+    a:hover {
+      color: #0056b3;
+    }
