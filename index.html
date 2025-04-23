@@ -13,6 +13,14 @@
 </head>
   <h1>To-do-list</h1>
 <body class="d-flex flex-column h-100">
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    tambah
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item active" href="form-toDoList.html">tambah tugas</a></a></li>
+  </ul>
+</div
   <table class="table  table-striped" id="toDoList">
     <thead>
       <tr class="table-secondary">
@@ -35,7 +43,7 @@
 .
   <img src="loader.gif" style="width: 2em; display: block" id="loader">
 
-  <a href="form-toDoList.html">Tambah</a>
+  
 
   <script type="module">
     import { ambilDaftarToDoList, formatAngka, hapusToDoList } from './main.js';
