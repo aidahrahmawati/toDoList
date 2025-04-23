@@ -73,8 +73,18 @@
     
     tombolTambah.addEventListener('click', async function (e) {
       e.preventDefault();
-     // tombolTambah.setAttribute('disabled', 'disabled');
-//loader.style.display = "block";
+      
+      if (
+      elemenNama.value.trim() === '' ||
+      elemenPrioritas.value === 'status' ||
+      elemenStatus.value === 'proritas' ||
+      elemenTanggal.value === ''
+    ) {
+      alert('Semua field harus diisi dengan benar!');
+      return;
+    }
+      //tombolTambah.setAttribute('disabled', 'disabled');
+      //loader.style.display = "block";
       
       await tambahToDoList(elemenNama.value, elemenPrioritas.value, elemenStatus.value, elemenTanggal.value);
       window.location.href = 'index.html';
